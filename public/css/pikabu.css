@@ -1,0 +1,164 @@
+
+.pikabu-viewport {
+  position: relative;
+  overflow: hidden;
+}
+html:not(.pikabu--is-legacy-android) .pikabu-viewport {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.pikabu-sidebar {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  overflow: auto;
+}
+
+.pikabu-sidebar--left {
+  width: 80%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.pikabu-container {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  overflow-x: hidden;
+}
+html:not(.pikabu--is-legacy-android) .pikabu-container {
+  -webkit-backface-visibility: hidden;
+}
+.pikabu--left-sidebar-visible .pikabu-container {
+  -webkit-transform: translate3d(80%, 0, 0);
+  -moz-transform: translate3d(80%, 0, 0);
+  -ms-transform: translate3d(80%, 0, 0);
+  -o-transform: translate3d(80%, 0, 0);
+  transform: translate3d(80%, 0, 0);
+}
+
+.pikabu-container,
+.pikabu-sidebar {
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+}
+.pikabu-overlay {
+  display: none;
+  background-color: #9fc4e8;
+  width: 20%;
+}
+.pikabu-overlay h1 {
+    transform: rotate(90deg);
+    color: white;
+    width: 280px;
+    margin-top: 175px;
+    margin-bottom: 0;
+    margin-left: -116px;
+    margin-right: 0;
+}
+.pikabu--left-sidebar-visible .pikabu-overlay, .pikabu--right-sidebar-visible .pikabu-overlay {
+  position: absolute;
+  top: 0;
+  z-index: 30;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.pikabu-sidebar--is-hidden {
+  display: none;
+}
+
+.pikabu--has-overflow-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+.pikabu-nav-toggle {
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    float: left;
+    display: block;
+    width: 84px;
+    height: 39px;
+    margin: 10px;
+    margin-right: 9px;
+    background: #9fc4e8;
+    border: solid 1px #81a6bb;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 0 #fcfdf4;
+    -moz-box-shadow: inset 0 1px 0 #fcfdf4;
+    box-shadow: inset 0 1px 0 #fcfdf4;
+    text-indent: 100%;
+    white-space: nowrap;
+    line-height: 29px;
+}
+
+.pikabu-nav-toggle::after {
+    content: 'گروه‌ها';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 80%;
+    height: 80%;
+    font-family: 'Almarai', sans-serif;
+    text-align: center;
+    text-indent: 0;
+    font-size: 15px;
+    font-weight: normal;
+    color: inherit;
+}
+
+.pikabu--left-sidebar-visible .pikabu-nav-toggle[data-role="left"], .pikabu--right-sidebar-visible .pikabu-nav-toggle[data-role="right"] {
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.pikabu-sidebar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.pikabu--left-sidebar-visible .pikabu-container {
+    -webkit-box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.15);
+}
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {float:none;}
